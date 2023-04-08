@@ -135,3 +135,14 @@ const openAddProductModalBtn = document.querySelector("#open-add-product-modal")
 openAddProductModalBtn.addEventListener("click", () => {
   addProductModal.style.display = "block";
 });
+const checkoutBtn = document.querySelector("#checkout-btn");
+
+checkoutBtn.addEventListener("click", () => {
+  if (cart.length === 0) {
+    alert("empty cart");
+  } else {
+    alert("Payment successful");
+    cart.length = 0; // Xóa giỏ hàng
+    displayCart(cart);
+  }
+});
